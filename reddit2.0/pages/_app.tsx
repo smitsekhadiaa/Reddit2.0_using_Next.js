@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps:{session, ...pageProps} }: AppProps) {
     <ApolloProvider client={client}>
     <SessionProvider session={session}>  
     {/* //session token for all pages if logged in or not, signin/out logic in header.tsx file */}
-      <div>
+      <div className='h-screen overflow-y-scroll bg-slate-200'>
         <Header/>  
         {/* //now all pages have header */}
         <Component {...pageProps} />
